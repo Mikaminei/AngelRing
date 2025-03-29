@@ -1,6 +1,8 @@
 package de.mikaminei.simpleangelring;
 
 import com.mojang.logging.LogUtils;
+import de.mikaminei.simpleangelring.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -21,6 +23,8 @@ public class SimpleAngelRing {
     public SimpleAngelRing(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -34,7 +38,9 @@ public class SimpleAngelRing {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RING);
+        }
     }
 
     @SubscribeEvent
