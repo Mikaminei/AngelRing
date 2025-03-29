@@ -13,6 +13,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> RING = ITEMS.register("ring",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ENERGY_CORE = ITEMS.register("energy_core",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

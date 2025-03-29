@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " D ",
+    "C#C",
+    " E "
+  ],
+  "key": {
+    "#": {
+      "item": "simpleangelring:ring"
+    },
+    "E": {
+      "item": "minecraft:elytra"
+    },
+    "C": {
+      "item": "simpleangelring:energy_core"
+    }
+  },
+  "result": {
+    "item": "simpleangelring:ring",
+    "count": 1
+  }
+}
