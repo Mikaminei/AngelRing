@@ -1,6 +1,7 @@
 package de.mikaminei.simpleangelring.item;
 
 import de.mikaminei.simpleangelring.SimpleAngelRing;
+import de.mikaminei.simpleangelring.item.custom.AngelRingItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,6 +16,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ENERGY_CORE = ITEMS.register("energy_core",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ANGEL_RING = ITEMS.register("angel_ring",
+            () -> new AngelRingItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

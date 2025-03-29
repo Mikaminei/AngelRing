@@ -15,6 +15,9 @@
     },
     "C": {
       "item": "simpleangelring:energy_core"
+    },
+    "D": {
+      "item": "minecraft:diamond"
     }
   },
   "result": {
