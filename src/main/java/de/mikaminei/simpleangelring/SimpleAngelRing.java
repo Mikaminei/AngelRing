@@ -43,6 +43,7 @@ public class SimpleAngelRing {
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.RING);
+            event.accept(ModItems.ANGEL_RING);
         }
     }
 

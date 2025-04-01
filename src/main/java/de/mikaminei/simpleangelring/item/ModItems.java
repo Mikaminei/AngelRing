@@ -13,12 +13,12 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, SimpleAngelRing.MOD_ID);
 
     public static final RegistryObject<Item> RING = ITEMS.register("ring",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ENERGY_CORE = ITEMS.register("energy_core",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ANGEL_RING = ITEMS.register("angel_ring",
-            () -> new AngelRingItem(new Item.Properties()));
+            () -> new AngelRingItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

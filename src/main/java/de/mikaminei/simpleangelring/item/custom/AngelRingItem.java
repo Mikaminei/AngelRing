@@ -6,6 +6,4 @@ public class AngelRingItem extends Item {
     public AngelRingItem(Properties pProperties) {
         super(pProperties);
     }
-
-
 }
